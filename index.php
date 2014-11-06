@@ -46,9 +46,9 @@ function setCookie(name, value, days){
 			<li><a href="http://www.mozilla.cz/">Mozilla.cz</a></li>
 			<li><a href="http://www.mozilla.cz/stahnout/">Stáhnout</a></li>
 			<li><a href="http://forum.mozilla.cz/">Fórum</a></li>
-			<li><a href="http://www.mozilla.cz/produkty/firefox/">Firefox</a></li>
-			<li><a href="http://www.mozilla.cz/produkty/thunderbird/">Thunderbird</a></li>
-			<li><a href="http://www.mozilla.cz/produkty/seamonkey/">SeaMonkey</a></li>
+			<li><a href="https://www.mozilla.org/cs/firefox/">Firefox</a></li>
+			<li><a href="https://www.mozilla.org/cs/firefox/">Thunderbird</a></li>
+			<li><a href="http://www.seamonkey-project.org/">SeaMonkey</a></li>
 		</ul>
 	</div>
 
@@ -60,11 +60,7 @@ function setCookie(name, value, days){
 
 		?>
 		<div id="links">
-			<a href="http://www.google.com/imghp?hl=cs&amp;tab=wi&amp;client=firefox-a&amp;rls=org.mozilla:cs-CZ:official_s">Obrázky</a>
-			&nbsp;
-			<a href="http://www.google.com/grphp?hl=cs&amp;tab=wg&amp;client=firefox-a&amp;rls=org.mozilla:cs-CZ:official_s">Skupiny</a>
-			&nbsp;
-			<a href="http://www.google.com/dirhp?hl=cs&amp;tab=wd&amp;client=firefox-a&amp;rls=org.mozilla:cs-CZ:official_s">Adresář</a>&nbsp;
+			<a href="http://www.google.com/imghp?hl=cs&amp;tab=wi&amp;client=firefox-a&amp;rls=org.mozilla:cs-CZ:official_s">Obrázky</a>&nbsp;
 		</div>
 	</div>
 <?php
@@ -90,7 +86,7 @@ function setCookie(name, value, days){
 		<div id="sm-update" class="box">
 			<h2><a href="http://www.mozilla.cz/stahnout/#firefox">Aktualizujte na nový Firefox</a></h2>
 			<p>
-				Používáte starou verzi prohlížeče <a href="http://www.mozilla-europe.org/cs/firefox/">Mozilla Firefox</a>.
+				Používáte starou verzi prohlížeče <a href="https://www.mozilla.org/cs/firefox/">Mozilla Firefox</a>.
 				Nová verze aplikace Mozilla Firefox opravuje některé bezpečnostní chyby
 				a&nbsp;nabízí nové uživatelské funkce.
 			</p>
@@ -162,7 +158,7 @@ function setCookie(name, value, days){
 <div id="foot">
 	<hr />
 	<p>
-		Copyright &copy; 2009&ndash;2011 <a href="http://www.mozilla.cz/">Mozilla.cz</a>,
+		Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="http://www.mozilla.cz/">Mozilla.cz</a>,
 		&nbsp;zpravodajství dodávají <a href="http://www.ceskenoviny.cz/">ČeskéNoviny.cz</a>,
 		hostováno <a href="http://www.cesky-hosting.cz/?d=15101">Český hosting</a>.
 	</p>
