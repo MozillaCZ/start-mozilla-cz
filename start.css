@@ -38,6 +38,8 @@ body[id] #head ul		{margin-top:52px}
 #search h2 a			{color:#000 !important;text-decoration:none}
 
 #search					{position:relative}
+#search input[type="text"]
+						{width:330px}
 form					{margin:.6em 1em;padding:0}
 input.text				{width:22em}
 body[id] input.text		{width:25em}
