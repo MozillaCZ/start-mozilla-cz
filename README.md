@@ -7,4 +7,4 @@ Instalace
 ----------
 
 - nakopírujte na server s podporou PHP
-- v případě potřeby zprovoznit odkazy ke stažení je potřeba nastavit přístup k databázi v *config.php*.
+- v případě potřeby zprovoznit tipy k SeaMonkey je potřeba nastavit přístup k databázi v *config.php*.
