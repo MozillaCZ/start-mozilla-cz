@@ -23,7 +23,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 <meta http-equiv="Content-language" content="cs" />
 <title>Mozilla Start</title>
 <link rel="stylesheet" href="/start.css" type="text/css" />
-<link rel="shortcut icon" href="http://www.mozilla.cz/wp-content/themes/mozillacz/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
 <meta name="copyright" content="Copyright (c) 2009 Mozilla.cz" />
 <meta name="author" content="HTML code: Adam Hauner; e-mail: aha@pinknet.cz" />
 <meta name="robots" content="index,follow" />
