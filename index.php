@@ -29,7 +29,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 <meta name="robots" content="index,follow" />
 <script type="text/javascript">
 <!--
-function sf(){document.google.q.focus();}
+function sf(){document.getElementById('q').focus();}
 function setCookie(name, value, days){
 	var expiration=new Date();
 	expiration.setTime(expiration.getTime()+(days*24*3600*1000));
@@ -64,7 +64,7 @@ function setCookie(name, value, days){
 		      <div>
 		        <input type="hidden" name="cx" value="partner-pub-5656955599344527:fcrwrcst7jn" />
 		        <input type="hidden" name="ie" value="UTF-8" />
-		        <input type="text" name="q" size="31" />
+		        <input type="text" name="q" size="31" id="q" />
 		        <input type="submit" name="sa" value="Vyhledat" />
 		      </div>
 		    </form>
