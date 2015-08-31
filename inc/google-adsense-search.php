@@ -1,7 +1,4 @@
 <!-- Search Google -->
-<style type="text/css">
-@import url(http://www.google.com/cse/api/branding.css);
-</style>
 <div class="cse-branding-bottom" style="background-color:#FFFFFF;color:#000000;margin:1.5em 0">
   <div class="cse-branding-logo" style="margin:0 1em">
     <img src="http://www.google.com/images/poweredby_transparent/poweredby_FFFFFF.gif" alt="Google" />
