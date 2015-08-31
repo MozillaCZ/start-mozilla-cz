@@ -53,21 +53,21 @@ function setCookie(name, value, days){
 	</div>
 
 	<div id="search" class="box">
-		<h2><a href="http://www.google.com/webhp?hl=cs&amp;tab=iw&amp;client=firefox-a&amp;rls=org.mozilla:cs-CZ:official_s">Google</a></h2>
+		<h2><a href="https://www.google.com/webhp?hl=cs&amp;tab=iw&amp;client=firefox-a&amp;rls=org.mozilla:cs-CZ:official_s">Google</a></h2>
 		<?php
 
 		require "inc/google-adsense-search.php";
 
 		?>
 		<div id="links">
-			<a href="http://www.google.com/imghp?hl=cs&amp;tab=wi&amp;client=firefox-a&amp;rls=org.mozilla:cs-CZ:official_s">Obrázky</a>&nbsp;
+			<a href="https://www.google.com/imghp?hl=cs&amp;tab=wi&amp;client=firefox-a&amp;rls=org.mozilla:cs-CZ:official_s">Obrázky</a>&nbsp;
 		</div>
 	</div>
 <?php
 	if (isMozillaSuite() && !ignoreMozillaSuiteUpdate()) {
 ?>
 		<div id="sm-update" class="box">
-			<h2><a href="http://www.mozilla.cz/stahnout/#seamonkey">Aktualizujte na SeaMonkey</a></h2>
+			<h2><a href="http://www.mozilla.cz/stahnout/seamonkey/">Aktualizujte na SeaMonkey</a></h2>
 			<p>
 				Vývoj aplikace Mozilla Suite byl ukončen. Doporučujeme vám aplikaci
 				<a href="http://www.seamonkey-project.org/">SeaMonkey</a>,
@@ -75,7 +75,7 @@ function setCookie(name, value, days){
 				větší rychlost a&nbsp;navíc řadu zajímavých novinek</a>.
 			</p>
 			<div>
-				<a href="http://www.mozilla.cz/stahnout/#seamonkey">stáhnout SeaMonkey</a> &middot;
+				<a href="http://www.mozilla.cz/stahnout/seamonkey/">stáhnout SeaMonkey</a> &middot;
 				<span onclick="setCookie('ignoreMS17Update',1,300);document.getElementById('sm-update').style.display='none'">již neupozorňovat</span>
 			</div>
 		</div>
@@ -84,14 +84,14 @@ function setCookie(name, value, days){
 	if (isOldFirefox() && !ignoreFirefoxUpdate()) {
 ?>
 		<div id="sm-update" class="box">
-			<h2><a href="http://www.mozilla.cz/stahnout/#firefox">Aktualizujte na nový Firefox</a></h2>
+			<h2><a href="http://www.mozilla.cz/stahnout/firefox/">Aktualizujte na nový Firefox</a></h2>
 			<p>
 				Používáte starou verzi prohlížeče <a href="https://www.mozilla.org/cs/firefox/">Mozilla Firefox</a>.
 				Nová verze aplikace Mozilla Firefox opravuje některé bezpečnostní chyby
 				a&nbsp;nabízí nové uživatelské funkce.
 			</p>
 			<div>
-				<a href="http://www.mozilla.cz/stahnout/#firefox">stáhnout Firefox</a> &middot;
+				<a href="http://www.mozilla.cz/stahnout/firefox/">stáhnout Firefox</a> &middot;
 				<span onclick="setCookie('ignoreFFUpdate',1,300);document.getElementById('sm-update').style.display='none'">již neupozorňovat</span>
 			</div>
 		</div>
@@ -141,7 +141,7 @@ function setCookie(name, value, days){
 	<p>
 		Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="http://www.mozilla.cz/">Mozilla.cz</a>,
 		&nbsp;zpravodajství dodávají <a href="http://www.ceskenoviny.cz/">ČeskéNoviny.cz</a>,
-		hostováno <a href="http://www.cesky-hosting.cz/?d=15101">Český hosting</a>.
+		hostováno <a href="http://www.cesky-hosting.cz/">Český hosting</a>.
 	</p>
 </div>
 <script type="text/javascript">
