@@ -47,10 +47,12 @@ function sf(){document.getElementById('q').focus();}
 	<div id="search" class="box">
 		<h2><a href="https://duckduckgo.com/">DuckDuckGo</a></h2>
 		<form action="https://duckduckgo.com/" method="get">
-			<img src="/img/ddg_logo.png" alt="DuckDuckGo logo" />
-			<input type="hidden" name="kl" value="cz-cs" />
-			<input type="text" name="q" size="31" id="q" />
-			<input type="submit" value="Vyhledat" />
+		    <fieldset>
+				<img src="/img/ddg_logo.png" alt="DuckDuckGo logo" />
+				<input type="hidden" name="kl" value="cz-cs" />
+				<input type="text" name="q" size="31" id="q" />
+				<input type="submit" value="Vyhledat" />
+			</fieldset>
 		</form>
 		<div id="links">
 			<a href="https://duckduckgo.com/settings">Nastavení DuckDuckGo</a>
