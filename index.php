@@ -1,7 +1,4 @@
 <?php
-error_reporting(0);
-ini_set('display_errors', 0);
-
 require 'inc/lastRSS.php';
 require 'inc/common.php';
 
@@ -30,11 +27,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 <script type="text/javascript">
 <!--
 function sf(){document.getElementById('q').focus();}
-function setCookie(name, value, days){
-	var expiration=new Date();
-	expiration.setTime(expiration.getTime()+(days*24*3600*1000));
-	document.cookie=name+"="+escape(value)+"; expires="+expiration.toGMTString();
-}
 -->
 </script>
 </head>
@@ -64,41 +56,7 @@ function setCookie(name, value, days){
 			<a href="https://duckduckgo.com/settings">Nastavení DuckDuckGo</a>
 		</div>
 	</div>
-<?php
-	if (isMozillaSuite() && !ignoreMozillaSuiteUpdate()) {
-?>
-		<div id="sm-update" class="box">
-			<h2><a href="http://www.mozilla.cz/stahnout/seamonkey/">Aktualizujte na SeaMonkey</a></h2>
-			<p>
-				Vývoj aplikace Mozilla Suite byl ukončen. Doporučujeme vám aplikaci
-				<a href="http://www.seamonkey-project.org/">SeaMonkey</a>,
-				která nabízí stejný rozsah funkcí, totožné uživatelské rozhraní,
-				větší rychlost a&nbsp;navíc řadu zajímavých novinek</a>.
-			</p>
-			<div>
-				<a href="http://www.mozilla.cz/stahnout/seamonkey/">stáhnout SeaMonkey</a> &middot;
-				<span onclick="setCookie('ignoreMS17Update',1,300);document.getElementById('sm-update').style.display='none'">již neupozorňovat</span>
-			</div>
-		</div>
-<?php
-	}
-	if (isOldFirefox() && !ignoreFirefoxUpdate()) {
-?>
-		<div id="sm-update" class="box">
-			<h2><a href="http://www.mozilla.cz/stahnout/firefox/">Aktualizujte na nový Firefox</a></h2>
-			<p>
-				Používáte starou verzi prohlížeče <a href="https://www.mozilla.org/cs/firefox/">Mozilla Firefox</a>.
-				Nová verze aplikace Mozilla Firefox opravuje některé bezpečnostní chyby
-				a&nbsp;nabízí nové uživatelské funkce.
-			</p>
-			<div>
-				<a href="http://www.mozilla.cz/stahnout/firefox/">stáhnout Firefox</a> &middot;
-				<span onclick="setCookie('ignoreFFUpdate',1,300);document.getElementById('sm-update').style.display='none'">již neupozorňovat</span>
-			</div>
-		</div>
-<?php
-	}
-?>
+
 	<div id="news" class="box">
 		<h2>Novinky</h2>
 		<div id="kratce">
