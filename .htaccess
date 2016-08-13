@@ -3,8 +3,51 @@
 ###
 <IfModule mod_expires.c>
     ExpiresActive On
+    # default 1 hour
+        ExpiresDefault A3600
+    # HTML/PHP/plain/XHTML/XML 1 hour
+        ExpiresByType text/html A3600
+        ExpiresByType text/php A3600
+        ExpiresByType application/php A3600
+        ExpiresByType text/plain A3600
+        ExpiresByType application/xhtml+xml A3600
+        ExpiresByType text/xml A3600
+        ExpiresByType application/xml A3600
+        ExpiresByType application/x-xml A3600
+    # CSS 1 week
+        ExpiresByType text/css A604800
+    # JavaScript 1 week
+        ExpiresByType text/javascript A604800
+        ExpiresByType text/x-javascript A604800
+        ExpiresByType application/javascript A604800
+        ExpiresByType application/x-javascript A604800
     # images 2 weeks
-		ExpiresByType image/ico A1209600
-		ExpiresByType image/x-icon A1209600
-		ExpiresByType image/vnd.microsoft.icon A1209600
+        ExpiresByType image/bmp A1209600
+        ExpiresByType image/gif A1209600
+        ExpiresByType image/ico A1209600
+        ExpiresByType image/x-icon A1209600
+        ExpiresByType image/vnd.microsoft.icon A1209600
+        ExpiresByType image/jpg A1209600
+        ExpiresByType image/jpeg A1209600
+        ExpiresByType image/png A1209600
+</IfModule>
+<IfModule mod_headers.c>
+    <FilesMatch "\\.(x?html?|php)$">
+        Header set Cache-Control "private, max-age=3600, must-revalidate"
+    </FilesMatch>
+    <FilesMatch "\\.(css)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+    <FilesMatch "\\.(js)$">
+        Header set Cache-Control "private, max-age=604800"
+    </FilesMatch>
+    <FilesMatch "\\.(bmp|gif|ico|jpe?g|png)$">
+        Header set Cache-Control "public, max-age=1209600"
+    </FilesMatch>
+    # BEGIN Turn ETags Off
+        Header unset Pragma
+        FileETag None
+        Header unset ETag
+        Header unset Last-Modified
+    # END Turn ETags Off
 </IfModule>
