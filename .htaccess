@@ -8,6 +8,13 @@
 </IfModule>
 
 ###
+# HSTS
+###
+<IfModule mod_headers.c>
+    Header set Strict-Transport-Security "max-age=15552000"
+</IfModule>
+
+###
 # CSP
 ###
 <IfModule mod_headers.c>
