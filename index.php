@@ -37,7 +37,7 @@ function sf(){document.getElementById('q').focus();}
 		<ul>
 			<li><a href="http://www.mozilla.cz/">Mozilla.cz</a></li>
 			<li><a href="http://www.mozilla.cz/stahnout/">Stáhnout</a></li>
-			<li><a href="http://forum.mozilla.cz/">Fórum</a></li>
+			<li><a href="https://forum.mozilla.cz/">Fórum</a></li>
 			<li><a href="https://www.mozilla.org/cs/firefox/">Firefox</a></li>
 			<li><a href="https://www.mozilla.org/cs/thunderbird/">Thunderbird</a></li>
 			<li><a href="http://www.seamonkey-project.org/">SeaMonkey</a></li>
