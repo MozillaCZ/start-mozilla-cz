@@ -24,13 +24,9 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 <meta name="copyright" content="Copyright (c) 2009 Mozilla.cz" />
 <meta name="author" content="HTML code: Adam Hauner; e-mail: aha@pinknet.cz" />
 <meta name="robots" content="index,follow" />
-<script type="text/javascript">
-<!--
-function sf(){document.getElementById('q').focus();}
--->
-</script>
+<script type="text/javascript" src="/js/sf.js"></script>
 </head>
-<body id="start-mozilla-cz" onload="sf();">
+<body id="start-mozilla-cz">
 <div id="page">
 	<div id="head">
 		<h1><span>Mozilla Start</span></h1>
@@ -105,14 +101,6 @@ function sf(){document.getElementById('q').focus();}
 		hostováno <a href="http://www.cesky-hosting.cz/">Český hosting</a>.
 	</p>
 </div>
-<script type="text/javascript">
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-10350415-6', 'auto');
-	ga('send', 'pageview');
-</script>
+<script type="text/javascript" src="/js/google-analytics.js"></script>
 </body>
 </html>
