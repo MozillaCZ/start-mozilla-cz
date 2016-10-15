@@ -31,8 +31,8 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 	<div id="head">
 		<h1><span>Mozilla Start</span></h1>
 		<ul>
-			<li><a href="http://www.mozilla.cz/">Mozilla.cz</a></li>
-			<li><a href="http://www.mozilla.cz/stahnout/">Stáhnout</a></li>
+			<li><a href="https://www.mozilla.cz/">Mozilla.cz</a></li>
+			<li><a href="https://www.mozilla.cz/stahnout/">Stáhnout</a></li>
 			<li><a href="https://forum.mozilla.cz/">Fórum</a></li>
 			<li><a href="https://www.mozilla.org/cs/firefox/">Firefox</a></li>
 			<li><a href="https://www.mozilla.org/cs/thunderbird/">Thunderbird</a></li>
@@ -64,9 +64,9 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 			?>
 		</div>
 		<div id="mozilla">
-			<h3><a href="http://www.mozilla.cz/">Mozilla.cz</a></h3>
+			<h3><a href="https://www.mozilla.cz/">Mozilla.cz</a></h3>
 			<?php
-			getRSSHeaders('http://www.mozilla.cz/feed/', MOZILLA_ITEMS);
+			getRSSHeaders('https://www.mozilla.cz/feed/', MOZILLA_ITEMS);
 			?>
 		</div>
 		<div class="cb"><!-- --></div>
@@ -96,7 +96,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 <div id="foot">
 	<hr />
 	<p>
-		Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="http://www.mozilla.cz/">Mozilla.cz</a>,
+		Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="https://www.mozilla.cz/">Mozilla.cz</a>,
 		&nbsp;zpravodajství dodávají <a href="http://www.ceskenoviny.cz/">ČeskéNoviny.cz</a>,
 		hostováno <a href="http://www.cesky-hosting.cz/">Český hosting</a>.
 	</p>
