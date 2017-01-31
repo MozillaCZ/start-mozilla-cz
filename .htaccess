@@ -11,7 +11,7 @@
 # HSTS
 ###
 <IfModule mod_headers.c>
-    Header set Strict-Transport-Security "max-age=15552000"
+    Header always set Strict-Transport-Security "max-age=15552000; includeSubDomains; preload" "expr=%{HTTPS} == 'on'"
 </IfModule>
 
 ###
