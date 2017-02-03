@@ -8,6 +8,11 @@ $rss->cache_time = 1200;
 $rss->cp = "";
 $rss->default_cp = "UTF-8";
 
+if(isset($_GET['block'])){
+    setcookie('blocked', $_GET['block'], time() + (5 * 365 * 24 * 60 * 60));
+    $_COOKIE['blocked'] = $_GET['block'];
+}
+
 define('RSS_HEADER_LENGTH', 80);
 define('NEWS_ITEMS', 6);
 define('MOZILLA_ITEMS', 7);
@@ -54,7 +59,21 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 			<a href="https://duckduckgo.com/settings">Nastavení DuckDuckGo</a>
 		</div>
 	</div>
-
+    
+        <?php
+            if($_COOKIE['blocked'] != "l10n"){
+                echo '
+                <div id="l10n" class="box">
+                    <h2>Lokalizace SeaMonkey</h2>
+                    <p>Chcete nám pomoci lokalizovat SeaMonkey? Ozvěte se nám na <span class="nabidka">info@mozilla.cz</span>, kde se dozvíte další info.</p>
+                    <div class="hide">
+                        <a href="?block=l10n">Skrýt box</a>
+                    </div>
+                </div>
+                ';
+            }
+        ?>
+    
 	<div id="news" class="box">
 		<h2>Novinky</h2>
 		<div id="kratce">
@@ -83,6 +102,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 				'Víte, že si můžete v nastavení účtu v poštovním klientu SeaMonkey nastavit automatický podpis e-mailu? Otevřete si nastavení účtu, klepněte na jeho název a do pole <span class="nabidka">Text podpisu</span> zadejte jeho podobu.',
 				'Chcete, aby balík SeaMonkey po svém spuštění automaticky otevíral panely z minula? Klepněte v dialogu <span class="nabidka">Předvolby</span> na sekci <span class="nabidka">Prohlížeč</span> a zde vyberte volbu <span class="nabidka">Obnovit předchozí relaci</span>.',
 				'Chcete při odpovídání na e-mail v SeaMonkey zahrnout do odpovědi pouze část textu zprávy? Jednoduše ji označte a klepněte na tlačítko <span class="nabidka">Odpovědět</span>. V okně odpovědi se zobrazí pouze zvolená část.',
+                                'SeaMonkey je přeložen do českého jazyka jen díky dobrovolníkům. Chcete se k nim přidat? Napište na <span class="nabidka">info@mozilla.cz</span>, kde vám poskytneme více informací.',
 			);
 			echo '<div id="tips" class="box">';
 			echo '<h2>Tip k SeaMonkey</h2>';
@@ -98,7 +118,8 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 	<p>
 		Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="https://www.mozilla.cz/">Mozilla.cz</a>,
 		&nbsp;zpravodajství dodávají <a href="http://www.ceskenoviny.cz/">ČeskéNoviny.cz</a>,
-		hostováno <a href="http://www.cesky-hosting.cz/">Český hosting</a>.
+                hostováno <a href="http://www.cesky-hosting.cz/">Český hosting</a>. 
+                <?php if(!isset($_COOKIE['blocked']) || $_COOKIE['blocked'] != "") echo'<a href="?block=">Obnovit skryté boxy</a>'; ?>
 	</p>
 </div>
 <script type="text/javascript" src="/js/google-analytics.js"></script>
