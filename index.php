@@ -114,8 +114,8 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 <div id="foot">
 	<hr />
 	<p>
-		Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="https://www.mozilla.cz/">Mozilla.cz</a>,
-		&nbsp;zpravodajství dodávají <a href="http://www.ceskenoviny.cz/">ČeskéNoviny.cz</a>,
+		Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="https://www.mozilla.cz/">Mozilla.cz</a>,&nbsp;zpravodajství 
+                dodávají <a href="http://www.ceskenoviny.cz/">ČeskéNoviny.cz</a>,
                 hostováno <a href="http://www.cesky-hosting.cz/">Český hosting</a>. 
                 <?php if(!isset($_COOKIE['hide-box']) || $_COOKIE['hide-box'] != "") echo'<a href="?hide-box=">Obnovit skryté boxy</a>'; ?>
 	</p>
