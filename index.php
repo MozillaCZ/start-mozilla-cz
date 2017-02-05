@@ -8,10 +8,7 @@ $rss->cache_time = 1200;
 $rss->cp = "";
 $rss->default_cp = "UTF-8";
 
-if(isset($_GET['block'])){
-    setcookie('blocked', $_GET['block'], time() + (5 * 365 * 24 * 60 * 60));
-    $_COOKIE['blocked'] = $_GET['block'];
-}
+updateCookies();
 
 define('RSS_HEADER_LENGTH', 80);
 define('NEWS_ITEMS', 6);
@@ -61,11 +58,11 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 	</div>
     
         <?php
-            if($_COOKIE['blocked'] != "l10n"){
+            if(isVisible('l10n')){
                 echo '
                 <div id="l10n" class="box">
                     <h2>Lokalizace SeaMonkey</h2>
-                    <p>Chcete nám pomoci lokalizovat SeaMonkey? Ozvěte se nám na <span class="nabidka">info@mozilla.cz</span>, kde se dozvíte další info.</p>
+                    <p>Chcete nám pomoci lokalizovat SeaMonkey? Ozvěte se nám na <span class="nabidka">info@mozilla.cz</span>, kde se dozvíte další informace.</p>
                     <div class="hide">
                         <a href="?block=l10n">Skrýt box</a>
                     </div>

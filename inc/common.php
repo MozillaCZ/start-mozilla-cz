@@ -34,3 +34,26 @@
 			echo "<p>Nepodařilo se načíst RSS kanál.</p>";
 		}
 	}
+        
+        function isVisible($name){
+                foreach (explode(";", $_COOKIE["blocked"]) as $item) {
+                        if($item === $name){
+                                return false;
+                        }
+                }
+                return true;
+        }
+        
+        function updateCookies(){
+                if(isset($_GET['block'])){
+                        $toBlock = $_GET['block'];
+                        $cookie = $_COOKIE['blocked'];
+                        if($toBlock === ""){
+                                $cookie = "";
+                        }elseif(isVisible($toBlock)) {
+                                $cookie = $cookie.";".$toBlock;
+                        }
+                        setcookie('blocked', $cookie, time() + (5 * 365 * 24 * 60 * 60));
+                        $_COOKIE['blocked'] = $cookie;
+                }
+        }
