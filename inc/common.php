@@ -35,8 +35,8 @@
 		}
 	}
         
-        function isVisible($name){
-                foreach (explode(";", $_COOKIE["blocked"]) as $item) {
+        function isBoxVisible($name){
+                foreach (explode(";", $_COOKIE["hide-box"]) as $item) {
                         if($item === $name){
                                 return false;
                         }
@@ -45,15 +45,15 @@
         }
         
         function updateCookies(){
-                if(isset($_GET['block'])){
-                        $toBlock = $_GET['block'];
-                        $cookie = $_COOKIE['blocked'];
-                        if($toBlock === ""){
+                if(isset($_GET['hide-box'])){
+                        $toHide = $_GET['hide-box'];
+                        $cookie = $_COOKIE['hide-box'];
+                        if($toHide === ""){
                                 $cookie = "";
-                        }elseif(isVisible($toBlock)) {
-                                $cookie = $cookie.";".$toBlock;
+                        }elseif(isBoxVisible($toHide)) {
+                                $cookie = $cookie.";".$toHide;
                         }
-                        setcookie('blocked', $cookie, time() + (5 * 365 * 24 * 60 * 60));
-                        $_COOKIE['blocked'] = $cookie;
+                        setcookie('hide-box', $cookie, time() + (5 * 365 * 24 * 60 * 60));
+                        $_COOKIE['hide-box'] = $cookie;
                 }
         }

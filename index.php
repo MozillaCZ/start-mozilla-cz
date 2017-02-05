@@ -59,13 +59,13 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 	</div>
     
         <?php
-            if(isVisible('l10n')){
+            if(isBoxVisible('l10n')){
                 echo '
                 <div id="l10n" class="box">
                     <h2>Lokalizace SeaMonkey</h2>
-                    <p>Chcete nám pomoci lokalizovat SeaMonkey? Ozvěte se nám na <span class="nabidka">info@mozilla.cz</span>, kde se dozvíte další informace.</p>
+                    <p>Chcete nám pomoci s překladem SeaMonkey? Ozvěte se nám na <span class="nabidka">info@mozilla.cz</span>, kde se dozvíte další informace.</p>
                     <div class="hide">
-                        <a href="?block=l10n">Skrýt box</a>
+                        <a href="?hide-box=l10n">Skrýt box</a>
                     </div>
                 </div>
                 ';
@@ -118,7 +118,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 		Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="https://www.mozilla.cz/">Mozilla.cz</a>,
 		&nbsp;zpravodajství dodávají <a href="http://www.ceskenoviny.cz/">ČeskéNoviny.cz</a>,
                 hostováno <a href="http://www.cesky-hosting.cz/">Český hosting</a>. 
-                <?php if(!isset($_COOKIE['blocked']) || $_COOKIE['blocked'] != "") echo'<a href="?block=">Obnovit skryté boxy</a>'; ?>
+                <?php if(!isset($_COOKIE['hide-box']) || $_COOKIE['hide-box'] != "") echo'<a href="?hide-box=">Obnovit skryté boxy</a>'; ?>
 	</p>
 </div>
 <script type="text/javascript" src="/js/google-analytics.js"></script>
