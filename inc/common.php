@@ -34,3 +34,26 @@
 			echo "<p>Nepodařilo se načíst RSS kanál.</p>";
 		}
 	}
+        
+        function isBoxVisible($name){
+                foreach (explode(";", $_COOKIE["hide-box"]) as $item) {
+                        if($item === $name){
+                                return false;
+                        }
+                }
+                return true;
+        }
+        
+        function updateCookies(){
+                if(isset($_GET['hide-box'])){
+                        $toHide = $_GET['hide-box'];
+                        $cookie = $_COOKIE['hide-box'];
+                        if($toHide === ""){
+                                $cookie = "";
+                        }elseif(isBoxVisible($toHide)) {
+                                $cookie = $cookie.";".$toHide;
+                        }
+                        setcookie('hide-box', $cookie, time() + (5 * 365 * 24 * 60 * 60));
+                        $_COOKIE['hide-box'] = $cookie;
+                }
+        }
