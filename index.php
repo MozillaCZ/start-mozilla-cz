@@ -35,10 +35,10 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 		<ul>
 			<li><a href="https://www.mozilla.cz/">Mozilla.cz</a></li>
 			<li><a href="https://www.mozilla.cz/stahnout/">Stáhnout</a></li>
-      <li><a href="http://www.seamonkey-project.org/donate/">Přispět</a></li>
+      <li><a href="https://www.seamonkey-project.org/donate/">Přispět</a></li>
 			<li><a href="https://www.mozilla.org/cs/firefox/">Firefox</a></li>
 			<li><a href="https://www.mozilla.org/cs/thunderbird/">Thunderbird</a></li>
-			<li><a href="http://www.seamonkey-project.org/">SeaMonkey</a></li>
+			<li><a href="https://www.seamonkey-project.org/">SeaMonkey</a></li>
 		</ul>
 	</div>
 
@@ -100,7 +100,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 				'Chcete, aby balík SeaMonkey po svém spuštění automaticky otevíral panely z minula? Klepněte v dialogu <span class="nabidka">Předvolby</span> na sekci <span class="nabidka">Prohlížeč</span> a zde vyberte volbu <span class="nabidka">Obnovit předchozí relaci</span>.',
 				'Chcete při odpovídání na e-mail v SeaMonkey zahrnout do odpovědi pouze část textu zprávy? Jednoduše ji označte a klepněte na tlačítko <span class="nabidka">Odpovědět</span>. V okně odpovědi se zobrazí pouze zvolená část.',
                                 'SeaMonkey je přeložen do českého jazyka jen díky dobrovolníkům. Chcete se k nim přidat? Napište na <span class="nabidka">info@mozilla.cz</span>, kde vám poskytneme více informací.',
-                                'Víte, že vývoj SeaMonkey je financován z dobrovolných příspěvků? Podpořit projekt zaslání finančního daru můžete na <a href="http://www.seamonkey-project.org/donate/">této stránce</a>.'
+                                'Víte, že vývoj SeaMonkey je financován z dobrovolných příspěvků? Podpořit projekt zaslání finančního daru můžete na <a href="https://www.seamonkey-project.org/donate/">této stránce</a>.'
                         );
 			echo '<div id="tips" class="box">';
 			echo '<h2>Tip k SeaMonkey</h2>';
@@ -116,7 +116,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 	<p>
 		Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="https://www.mozilla.cz/">Mozilla.cz</a>,&nbsp;zpravodajství 
                 dodávají <a href="http://www.ceskenoviny.cz/">ČeskéNoviny.cz</a>,
-                hostováno <a href="http://www.cesky-hosting.cz/">Český hosting</a>. 
+                hostováno <a href="https://www.cesky-hosting.cz/">Český hosting</a>.
                 <?php if(!isset($_COOKIE['hide-box']) || $_COOKIE['hide-box'] != "") echo'<a href="?hide-box=">Obnovit skryté</a>'; ?>
 	</p>
 </div>
