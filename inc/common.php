@@ -53,7 +53,7 @@
                         }elseif(isBoxVisible($toHide)) {
                                 $cookie = $cookie.";".$toHide;
                         }
-                        setcookie('hide-box', $cookie, time() + (5 * 365 * 24 * 60 * 60));
+                        setcookie('hide-box', $cookie, time() + (5 * 365 * 24 * 60 * 60), '/', 'start.mozilla.cz', true, true);
                         $_COOKIE['hide-box'] = $cookie;
                 }
         }
