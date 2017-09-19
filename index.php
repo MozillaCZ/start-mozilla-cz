@@ -28,26 +28,26 @@ updateCookies();
 
     <div id="search" class="box">
         <h2><a href="https://duckduckgo.com/">DuckDuckGo</a></h2>
+        <div id="links">
+            <a href="https://duckduckgo.com/settings">Nastavení DuckDuckGo</a>
+        </div>
         <form action="https://duckduckgo.com/" method="get">
             <fieldset>
                 <img src="/img/ddg_logo.png" alt="DuckDuckGo logo" />
                 <input type="hidden" name="kl" value="cz-cs" />
                 <input type="text" name="q" size="31" id="q" />
-                <input type="submit" value="Vyhledat" />
+                <input type="submit" value="Hledat" />
             </fieldset>
         </form>
-        <div id="links">
-            <a href="https://duckduckgo.com/settings">Nastavení DuckDuckGo</a>
-        </div>
     </div>
 
     <?php if (isBoxVisible('l10n')) : ?>
             <div id="l10n" class="box">
                 <h2>Lokalizace SeaMonkey</h2>
-                <p>Chcete nám pomoci s překladem SeaMonkey? Ozvěte se nám na <span class="nabidka">info@mozilla.cz</span>, kde se dozvíte další informace.</p>
                 <div class="hide">
                     <a href="?hide-box=l10n">Skrýt box</a>
                 </div>
+                <p>Chcete nám pomoci s překladem SeaMonkey? Ozvěte se nám na <span class="nabidka">info@mozilla.cz</span>, kde se dozvíte další informace.</p>
             </div>
     <?php endif; ?>
 
@@ -84,7 +84,6 @@ updateCookies();
 </div>
 
 <div id="foot">
-    <hr />
     <p>
         Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="https://www.mozilla.cz/">Mozilla.cz</a>,
         zpravodajství dodávají <a href="http://www.ceskenoviny.cz/">ČeskéNoviny.cz</a>,

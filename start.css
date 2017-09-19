@@ -34,21 +34,19 @@ body #head ul			{margin-top:52px}
 .box h2					{font-size:1em;font-weight:bold;margin:0 0 .1em;padding:.1em 1em;background-color:#CFE0EB;
 						border-bottom:1px solid #163754;position:relative}
 #search h2 a			{color:#000 !important;text-decoration:none}
-
-#search, #l10n				{position:relative}
-#search fieldset        {display:inline-block;margin:0;padding:0;border:none;}
+#search form			{margin:.6em 1em;padding:0}
+#search, #l10n			{position:relative}
+#search fieldset        {display:block;margin:0;padding:0;border:none;}
+#search img				{float:left; max-width: 32px; max-height: 32px;}
 #search input[type="text"]
-						{width:350px}
-form					{margin:.6em 1em;padding:0}
-form img				{max-width: 56px; max-height: 32px; vertical-align: middle; margin-right: 0.4em;}
-input.text				{width:22em}
-body input.text			{width:25em}
-label					{vertical-align:text-bottom}
+						{width:22.5em; margin: 0 0.5em;}
+#search input[type="submit"]
+						{float:right;}
+
 #links, .hide					{position:absolute;right:1.8em;top:.2em;font-size:.85em;text-align:right;white-space:nowrap}
 body #links, .hide			{right:.7em}
 
 #foot					{min-width:550px;width:42em;margin:.2em auto 2em;text-align:left;position:relative}
-#foot hr				{display:none}
 #foot p					{color:#888;font-size:.8em;margin:0;padding:0}
 #foot p a				{color:#888}
 #foot p a:hover			{text-decoration:none;color:#666}
