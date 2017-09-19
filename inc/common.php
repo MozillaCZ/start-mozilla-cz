@@ -17,7 +17,7 @@
             /* Show RSS info */
             $output .= "<h3><a href=\"".$rss->channel->link."\">".$rss->channel->title."</a></h3>" . PHP_EOL;
             /* Show last published articles (title, link) */
-            $output .= "<ul class=\"lnks\">" . PHP_EOL;
+            $output .= "<ul>" . PHP_EOL;
             $i = 0;
             foreach($rss->channel->item as $item) {
                 /* increase internal counter of items */
