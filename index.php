@@ -20,9 +20,9 @@ updateCookies();
         <ul>
             <li><a href="https://www.mozilla.cz/">Mozilla.cz</a></li>
             <li><a href="https://www.mozilla.cz/stahnout/">Stáhnout</a></li>
-            <li><a href="https://www.mozilla.org/cs/firefox/">Firefox</a></li>
-            <li><a href="https://www.mozilla.org/cs/thunderbird/">Thunderbird</a></li>
-            <li><a href="https://www.seamonkey-project.org/">SeaMonkey</a></li>
+            <li><a href="https://www.mozilla.cz/produkty/firefox/">Firefox</a></li>
+            <li><a href="https://www.mozilla.cz/produkty/thunderbird/">Thunderbird</a></li>
+            <li><a href="https://www.mozilla.cz/produkty/seamonkey/">SeaMonkey</a></li>
         </ul>
     </div>
 
