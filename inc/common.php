@@ -8,31 +8,45 @@
         return $header;
     }
 
-    /* echoes headers for the chosen RSS feed */
+    /* returns headers for the chosen RSS feed */
     function getRSSHeaders($url, $numHeaders) {
-
-        global $rss;
-
+        $output = '';
         /* Try to load and parse RSS file */
-        if ($rs = $rss->get($url)) {
+        $rss = getRSS($url, './cache', 1200);
+        if ($rss) {
+            /* Show RSS info */
+            $output .= "<h3><a href=\"".$rss->channel->link."\">".$rss->channel->title."</a></h3>" . PHP_EOL;
             /* Show last published articles (title, link) */
-            echo "<ul class=\"lnks\">\n";
+            $output .= "<ul class=\"lnks\">" . PHP_EOL;
             $i = 0;
-            foreach($rs['items'] as $item) {
+            foreach($rss->channel->item as $item) {
                 /* increase internal counter of items */
                 $i++;
 
-                $title = trimRSSHeader($item['title'], RSS_HEADER_LENGTH);
-                echo "\t<li><a href=\"$item[link]\">" . htmlspecialchars($title) . "</a></li>\n";
+                $title = trimRSSHeader($item->title, 80);
+                $output .= "<li><a href=\"$item->link\">" . htmlspecialchars($title) . "</a></li>" . PHP_EOL;
 
                 /* stop the loop if maximum allowed number of items is reached */
                 if($i >= $numHeaders)
                     break;
             };
-            echo "</ul>\n";
+            $output .= "</ul>" . PHP_EOL;
         } else {
-            echo "<p>Nepodařilo se načíst RSS kanál.</p>";
+            $output .= "<p>Nepodařilo se načíst RSS kanál.</p>";
         }
+        return $output;
+    }
+
+    function getRSS($url, $cacheDir, $cacheTTL) {
+        $cachedFile = $cacheDir . '/' . sha1($url) . '.cache';
+        $cached = is_file($cachedFile) && ( time()-filemtime($cachedFile) > $cacheTTL );
+        $fileToLoad = $cached ? $cachedFile : $url;
+        $rss = simplexml_load_file($fileToLoad);
+        if (!$cached && $rss) {
+            $rss->asXML($cachedFile);
+            clearstatcache($cachedFile);
+        }
+        return $rss;
     }
 
     function isBoxVisible($name){

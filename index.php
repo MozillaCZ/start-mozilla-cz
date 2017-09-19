@@ -1,19 +1,6 @@
 <?php
-require 'inc/lastRSS.php';
 require 'inc/common.php';
-
-$rss = new lastRSS;
-$rss->cache_dir = './cache';
-$rss->cache_time = 1200;
-$rss->cp = "";
-$rss->default_cp = "UTF-8";
-
 updateCookies();
-
-define('RSS_HEADER_LENGTH', 80);
-define('NEWS_ITEMS', 6);
-define('MOZILLA_ITEMS', 7);
-echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
@@ -74,16 +61,10 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 	<div id="news" class="box">
 		<h2>Novinky</h2>
 		<div id="kratce">
-			<h3><a href="http://www.ceskenoviny.cz/">České noviny</a></h3>
-			<?php
-			getRSSHeaders('http://firefox-rss.ceskenoviny.cz/', NEWS_ITEMS);
-			?>
+			<?php echo getRSSHeaders('http://firefox-rss.ceskenoviny.cz/', 6); ?>
 		</div>
 		<div id="mozilla">
-			<h3><a href="https://www.mozilla.cz/">Mozilla.cz</a></h3>
-			<?php
-			getRSSHeaders('https://www.mozilla.cz/feed/', MOZILLA_ITEMS);
-			?>
+			<?php echo getRSSHeaders('https://www.mozilla.cz/feed/', 7); ?>
 		</div>
 		<div class="cb"><!-- --></div>
 	</div>
