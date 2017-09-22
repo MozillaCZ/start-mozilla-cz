@@ -56,7 +56,9 @@ body #page {
 }
 
 #head {
-	background: url("/img/header-b.png") repeat-x scroll 0 0;
+	background: #3f5c75;
+	background: -moz-linear-gradient(top, #3f5c75 0%, #163753 100%);
+	background: linear-gradient(to bottom, #3f5c75 0%, #163753 100%);
 	position: relative;
 	min-height: 50px;
 	border-top: 1px solid #000
