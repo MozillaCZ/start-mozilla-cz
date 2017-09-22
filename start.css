@@ -75,7 +75,8 @@ body #head {
 	top: 0;
 	left: 0;
 	z-index: 2;
-	background: transparent url("/img/logo.png") no-repeat scroll 0 0;
+	background: transparent url("/img/logo.svg") no-repeat scroll 0 0;
+	background-size: auto 23px;
 	margin-left: 10px;
 	margin-top: 13px;
 }
