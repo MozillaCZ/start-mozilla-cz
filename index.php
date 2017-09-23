@@ -33,7 +33,7 @@ updateCookies();
         </div>
         <form action="https://duckduckgo.com/" method="get">
             <fieldset>
-                <img src="/img/ddg_logo.png" alt="DuckDuckGo logo" />
+                <img src="/img/ddg_logo.svg" alt="DuckDuckGo logo" />
                 <input type="hidden" name="kl" value="cz-cs" />
                 <input type="text" name="q" size="31" id="q" />
                 <input type="submit" value="Hledat" />
