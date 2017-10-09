@@ -39,7 +39,7 @@
 
     function getRSS($url, $cacheDir, $cacheTTL) {
         $cachedFile = $cacheDir . '/' . sha1($url) . '.cache';
-        $cached = is_file($cachedFile) && ( time()-filemtime($cachedFile) > $cacheTTL );
+        $cached = is_file($cachedFile) && ( time()-filemtime($cachedFile) < $cacheTTL );
         $fileToLoad = $cached ? $cachedFile : $url;
         $rss = simplexml_load_file($fileToLoad);
         if (!$cached && $rss) {
