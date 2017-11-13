@@ -233,6 +233,10 @@ body #news div {
 	background: #FFF8DD
 }
 
+#news a {
+	display: block;
+}
+
 #kratce {
 	float: left
 }
