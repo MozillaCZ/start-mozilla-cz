@@ -49,6 +49,21 @@
         return $rss;
     }
 
+    function getLatestSeaMonkeyVersion($url = 'https://www.seamonkey-project.org/seamonkey_versions.json', $cacheDir = './cache', $cacheTTL = 1200) {
+        $cachedFile = $cacheDir . '/' . sha1($url) . '.cache';
+        $cached = is_file($cachedFile) && ( time()-filemtime($cachedFile) < $cacheTTL );
+        $fileToLoad = $cached ? $cachedFile : $url;
+        $context = stream_context_create(
+            array('http' => array('timeout' => 2))
+        );
+        $json = @file_get_contents($fileToLoad, false, $context);
+        if (!$cached && $json) {
+            file_put_contents($cachedFile, $json, LOCK_EX);
+            clearstatcache($cachedFile);
+        }
+        return json_decode($json,true)['LATEST_SEAMONKEY_VERSION'];
+    }
+
     function isBoxVisible($name){
         foreach (explode(";", $_COOKIE["hide-box"]) as $item) {
             if($item === $name){

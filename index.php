@@ -39,17 +39,17 @@ updateCookies();
                     </fieldset>
                 </form>
             </div>
-            
-            <?php if (isBoxVisible('l10n')) : ?>
-                <div id="l10n" class="box">
-                    <h2>Lokalizace SeaMonkey</h2>
+
+            <?php if (isBoxVisible('update')) : ?>
+                <div id="update" class="box">
+                    <h2>Aktuální verze SeaMonkey</h2>
                     <div class="hide">
-                        <a href="?hide-box=l10n">Skrýt box</a>
+                        <a href="?hide-box=update">Skrýt box</a>
                     </div>
-                    <p>Chcete nám pomoci s překladem SeaMonkey? Ozvěte se nám na <span class="nabidka">info@mozilla.cz</span>, kde se dozvíte další informace.</p>
+                    <p>Máte aktuální verzi <strong>SeaMonkey <?php echo getLatestSeaMonkeyVersion(); ?></strong>? <a href="https://www.mozilla.cz/stahnout/seamonkey/">Stáhněte si ji z Mozilla.cz</a>.</p>
                 </div>
             <?php endif; ?>
-            
+
             <div id="news" class="box">
                 <h2>Novinky</h2>
                 <div id="kratce">

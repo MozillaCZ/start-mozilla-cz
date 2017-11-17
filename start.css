@@ -139,7 +139,7 @@ body #head ul {
 	padding: 0
 }
 
-#search, #l10n {
+#search, #update {
 	position: relative
 }
 
@@ -245,7 +245,7 @@ body #news div {
 	float: right
 }
 
-#tips p, #l10n p {
+#tips p, #update p {
 	margin: 10px;
 }
 
