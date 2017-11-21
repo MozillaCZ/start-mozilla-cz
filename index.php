@@ -7,8 +7,8 @@ updateCookies();
     <head>
         <meta charset="UTF-8">
         <title>Mozilla Start</title>
-        <link rel="stylesheet" href="/start.css" type="text/css"/>
-        <link rel="shortcut icon" href="/favicon.ico"/>
+        <link rel="stylesheet" href="./start.css" type="text/css"/>
+        <link rel="shortcut icon" href="./favicon.ico"/>
         <meta name="copyright" content="Copyright (c) 2009-<?php echo date('Y'); ?> Mozilla.cz"/>
     </head>
     
@@ -32,7 +32,7 @@ updateCookies();
                 </div>
                 <form action="https://duckduckgo.com/" method="GET">
                     <fieldset>
-                        <img src="/img/ddg_logo.svg" alt="DuckDuckGo logo"/>
+                        <img src="./img/ddg_logo.svg" alt="DuckDuckGo logo"/>
                         <input type="hidden" name="kl" value="cz-cs"/>
                         <input type="text" name="q" size="31" id="q"/>
                         <input type="submit" value="Hledat"/>
@@ -92,7 +92,7 @@ updateCookies();
                 <?php endif; ?>
             </p>
         </div>
-        <script type="text/javascript" src="/js/sf.js"></script>
-        <script type="text/javascript" src="/js/google-analytics.js"></script>
+        <script type="text/javascript" src="./js/sf.js"></script>
+        <script type="text/javascript" src="./js/google-analytics.js"></script>
     </body>
 </html>
