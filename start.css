@@ -224,17 +224,21 @@ body #news div {
 
 #news li {
 	list-style-type: none;
-	padding: .1em .2em;
-	margin-bottom: .4em;
 	font-size: .85em
 }
 
-#news li:hover {
-	background: #FFF8DD
+#news ul a {
+	display: block;
+	padding: .1em .2em;
+	margin-bottom: .4em;
 }
 
-#news a {
-	display: block;
+#news ul a:hover {
+	background-color: #FFF8DD;
+}
+
+#news ul a:visited:not(:hover) {
+	color: black;
 }
 
 #kratce {
