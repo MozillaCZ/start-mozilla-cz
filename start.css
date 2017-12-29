@@ -159,7 +159,7 @@ body #head ul {
 }
 
 #search input[type="text"] {
-	width: auto;
+	width: 22.5em;
 	margin: 0 0.5em;
 }
 
