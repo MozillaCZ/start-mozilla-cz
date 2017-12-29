@@ -144,25 +144,23 @@ body #head ul {
 }
 
 #search fieldset {
-	display: block;
 	margin: 0;
 	padding: 0;
 	border: none;
+	display: -moz-box;
+	display: flex;
+	align-items: center;
+	-moz-box-align: center;
 }
 
 #search img {
-	float: left;
 	max-width: 32px;
 	max-height: 32px;
 }
 
 #search input[type="text"] {
-	width: 22.5em;
+	width: auto;
 	margin: 0 0.5em;
-}
-
-#search input[type="submit"] {
-	float: right;
 }
 
 #links, .hide {
