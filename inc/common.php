@@ -63,26 +63,3 @@
         }
         return json_decode($json,true)['LATEST_SEAMONKEY_VERSION'];
     }
-
-    function isBoxVisible($name){
-        foreach (explode(";", $_COOKIE["hide-box"]) as $item) {
-            if($item === $name){
-                return false;
-            }
-        }
-        return true;
-    }
-
-    function updateCookies(){
-        if(isset($_GET['hide-box'])){
-            $toHide = $_GET['hide-box'];
-            $cookie = $_COOKIE['hide-box'];
-            if($toHide === ""){
-                $cookie = "";
-            }elseif(isBoxVisible($toHide)) {
-                $cookie = $cookie.";".$toHide;
-            }
-            setcookie('hide-box', $cookie, time() + (5 * 365 * 24 * 60 * 60), '/', 'start.mozilla.cz', true, true);
-            $_COOKIE['hide-box'] = $cookie;
-        }
-    }

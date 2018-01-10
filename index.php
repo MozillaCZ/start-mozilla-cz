@@ -1,6 +1,5 @@
 <?php
 require 'inc/common.php';
-updateCookies();
 ?>
 <!DOCTYPE html>
 <html xml:lang="cs" lang="cs">
@@ -40,15 +39,13 @@ updateCookies();
                 </form>
             </div>
 
-            <?php if (isBoxVisible('update')) : ?>
-                <div id="update" class="box">
-                    <h2>Aktuální verze SeaMonkey</h2>
-                    <div class="hide">
-                        <a href="?hide-box=update">Skrýt box</a>
-                    </div>
-                    <p>Máte aktuální verzi <strong>SeaMonkey <?php echo getLatestSeaMonkeyVersion(); ?></strong>? <a href="https://www.mozilla.cz/stahnout/seamonkey/">Stáhněte si ji z Mozilla.cz</a>.</p>
+            <div id="update" class="box dynamic">
+                <h2>Aktuální verze SeaMonkey</h2>
+                <div class="hide">
+                    <a href="#">Skrýt box</a>
                 </div>
-            <?php endif; ?>
+                <p>Máte aktuální verzi <strong>SeaMonkey <?php echo getLatestSeaMonkeyVersion(); ?></strong>? <a href="https://www.mozilla.cz/stahnout/seamonkey/">Stáhněte si ji z Mozilla.cz</a>.</p>
+            </div>
 
             <div id="news" class="box">
                 <h2>Novinky</h2>
@@ -87,12 +84,11 @@ updateCookies();
                 Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="https://www.mozilla.cz/">Mozilla.cz</a>,
                 zpravodajství dodávají <a href="http://www.ceskenoviny.cz/">ČeskéNoviny.cz</a>,
                 hostováno <a href="https://www.cesky-hosting.cz/">Český hosting</a>.
-                <?php if (!isset($_COOKIE['hide-box']) || $_COOKIE['hide-box'] != "") : ?>
-                    <a href="?hide-box=">Obnovit skryté</a>
-                <?php endif; ?>
+                <a href="#" id="show-all-boxes">Obnovit skryté</a>
             </p>
         </div>
-        <script type="text/javascript" src="./js/sf.js"></script>
+        <script type="text/javascript" src="./js/DynamicBoxes.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
         <script type="text/javascript" src="./js/google-analytics.js"></script>
     </body>
 </html>
