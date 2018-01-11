@@ -76,15 +76,13 @@ body #head {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 2;
-	background: transparent url("/img/logo.svg") no-repeat scroll 0 0;
-	background-size: auto 23px;
 	margin-left: 10px;
 	margin-top: 13px;
+	color: white;
 }
 
-#head h1 span {
-	display: none
+#head h1 img {
+	height: 23px;
 }
 
 #head ul {

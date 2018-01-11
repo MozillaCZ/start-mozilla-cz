@@ -14,7 +14,7 @@ require 'inc/common.php';
     <body>
         <div id="page">
             <div id="head">
-                <h1><span>Mozilla Start</span></h1>
+                <h1><img src="./img/logo.svg" alt="Mozilla.cz"/></h1>
                 <ul>
                     <li><a href="https://www.mozilla.cz/">Mozilla.cz</a></li>
                     <li><a href="https://www.mozilla.cz/stahnout/">Stáhnout</a></li>
