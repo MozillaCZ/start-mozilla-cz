@@ -1,6 +1,7 @@
 class DynamicBoxes {
     constructor() {
         this._key = 'hidden-boxes';
+        this._cookieValid = 3600*24*60;
         this._boxes = [...document.querySelectorAll('.box.dynamic')];
         this._showAllLink = document.getElementById('show-all-boxes');
         this._init();
@@ -32,7 +33,7 @@ class DynamicBoxes {
             .filter(box => !box.classList.contains('visible'))
             .map(box => box.id)
             .join(',');
-        document.cookie = `${this._key}=${hiddenBoxesString}`;
+        document.cookie = `${this._key}=${hiddenBoxesString}; max-age=${this._cookieValid}`;
     }
 
     _updateShowAllLink() {
