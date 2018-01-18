@@ -46,6 +46,9 @@
             $rss->asXML($cachedFile);
             clearstatcache($cachedFile);
         }
+        if (!$rss) {
+            $rss = simplexml_load_file($cachedFile);
+        }
         return $rss;
     }
 
