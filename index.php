@@ -8,7 +8,6 @@ require 'inc/common.php';
         <title>Mozilla Start</title>
         <link rel="stylesheet" href="./start.css" type="text/css"/>
         <link rel="shortcut icon" href="./favicon.ico"/>
-        <meta name="copyright" content="Copyright (c) 2009-<?php echo date('Y'); ?> Mozilla.cz"/>
     </head>
     
     <body>
@@ -75,15 +74,7 @@ require 'inc/common.php';
                 ?>
             </div>
         </div>
-        
-        <div id="foot">
-            <p>
-                Copyright &copy; 2009&ndash;<?php echo date('Y'); ?> <a href="https://www.mozilla.cz/">Mozilla.cz</a>,
-                zpravodajství dodávají <a href="http://www.ceskenoviny.cz/">ČeskéNoviny.cz</a>,
-                hostováno <a href="https://www.cesky-hosting.cz/">Český hosting</a>.
-                <a href="#" id="show-all-boxes">Obnovit skryté</a>
-            </p>
-        </div>
+
         <script type="text/javascript" src="./js/DynamicBoxes.js"></script>
         <script type="text/javascript" src="./js/index.js"></script>
         <script type="text/javascript" src="./js/google-analytics.js"></script>

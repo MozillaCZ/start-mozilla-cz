@@ -1,58 +1,36 @@
-html {
-	margin: 0;
-	padding: 0
-}
-
 body {
-	margin: 0 1em;
-	padding: 0
-}
-
-body {
-	color: #000;
-	background: #FFF;
-	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
-	voice-family: "\"}\"";
-	voice-family: inherit;
-	font-size: 81.25%
+	font-size: 81.25%;
 }
 
-a,
-a:link {
-	color: #00E
+a {
+	color: #00E;
 }
 
 a:visited {
-	color: #009
+	color: #009;
 }
 
 a:hover,
 a:focus,
 a:active {
 	color: #00F;
-	text-decoration: none
+	text-decoration: none;
 }
 
 .cb {
 	clear: both;
 	visibility: hidden;
 	height: 1px;
-	line-height: 1px
+	line-height: 1px;
 }
 
 #page {
-	min-width: 550px;
-	width: 42em;
+	width: 550px;
 	border: 2px solid #163754;
-	margin: 2em auto .2em;
-	text-align: left;
-	background: #F4F4FF
-}
-
-body #page {
-	border-top: none
+	margin: 2em auto 0;
+	background: #F4F4FF;
 }
 
 #head {
@@ -61,24 +39,15 @@ body #page {
 	background: linear-gradient(to bottom, #3f5c75 0%, #163753 100%);
 	position: relative;
 	min-height: 50px;
-	border-top: 1px solid #000
-}
-
-body #head {
-	border-top: 2px solid #000
+	border-top: 1px solid #000;
 }
 
 #head h1 {
 	margin: 0;
 	padding: 0;
-	height: 40px;
-	width: 320px;
-	position: absolute;
-	top: 0;
-	left: 0;
 	margin-left: 10px;
 	margin-top: 13px;
-	color: white;
+	color: #fff;
 }
 
 #head h1 img {
@@ -86,35 +55,31 @@ body #head {
 }
 
 #head ul {
-	margin: 51px 0 0 0;
 	padding: .1em 1em .3em .5em;
-	background: #425E72
-}
-
-body #head ul {
-	margin-top: 52px
+	background: #425E72;
 }
 
 #head li {
 	list-style-type: none;
 	display: inline;
 	padding-right: .5em;
-	font-size: .85em
+	font-size: .85em;
 }
 
-#head :link,
-#head :visited {
-	color: #ACCEE6
+#head a:link,
+#head a:visited {
+	color: #ACCEE6;
 }
 
 #head a:hover {
-	color: #FFF
+	color: #FFF;
 }
 
 .box {
 	margin: 1em;
 	border: 1px solid #163754;
-	background: #FFF
+	background: #FFF;
+	position: relative;
 }
 
 .box h2 {
@@ -124,7 +89,6 @@ body #head ul {
 	padding: .1em 1em;
 	background-color: #CFE0EB;
 	border-bottom: 1px solid #163754;
-	position: relative
 }
 
 .box.dynamic {
@@ -133,6 +97,13 @@ body #head ul {
 
 .box.dynamic.visible {
 	display: block;
+}
+
+#links, .hide {
+	position: absolute;
+	right: .7em;
+	top: .2em;
+	font-size: .85em;
 }
 
 #show-all-boxes {
@@ -145,16 +116,12 @@ body #head ul {
 
 #search h2 a {
 	color: #000 !important;
-	text-decoration: none
+	text-decoration: none;
 }
 
 #search form {
 	margin: .6em 1em;
-	padding: 0
-}
-
-.box {
-	position: relative
+	padding: 0;
 }
 
 #search fieldset {
@@ -177,66 +144,28 @@ body #head ul {
 	margin: 0 0.5em;
 }
 
-#links, .hide {
-	position: absolute;
-	right: 1.8em;
-	top: .2em;
-	font-size: .85em;
-	text-align: right;
-	white-space: nowrap
-}
-
-body #links, .hide {
-	right: .7em
-}
-
-#foot {
-	min-width: 550px;
-	width: 42em;
-	margin: .2em auto 2em;
-	text-align: left;
-	position: relative
-}
-
-#foot p {
-	color: #888;
-	font-size: .8em;
-	margin: 0;
-	padding: 0
-}
-
-#foot p a {
-	color: #888
-}
-
-#foot p a:hover {
-	text-decoration: none;
-	color: #666
-}
-
-#news div,
-body #news div {
+#news div {
 	width: 45%;
-	margin: .6em 1em 0 .9em
+	margin: .6em 1em 0 .9em;
 }
 
-.box h3 {
+#news h3 {
 	font-size: 1em;
-	margin: 0 0 0 .1em
+	margin: 0 0 0 .1em;
 }
 
-.box h3 a {
-	color: #000 !important
+#news h3 a {
+	color: #000 !important;
 }
 
 #news ul {
 	margin: .5em 0;
-	padding: 0
+	padding: 0;
 }
 
 #news li {
 	list-style-type: none;
-	font-size: .85em
+	font-size: .85em;
 }
 
 #news ul a {
@@ -250,15 +179,15 @@ body #news div {
 }
 
 #news ul a:visited:not(:hover) {
-	color: black;
+	color: #000;
 }
 
-#kratce {
-	float: left
+#news #kratce {
+	float: left;
 }
 
-#mozilla {
-	float: right
+#news #mozilla {
+	float: right;
 }
 
 #tips p, #update p {
@@ -269,12 +198,13 @@ body #news div {
 	background-color: #FBEFE7;
 	padding: 0 1px 0 1px;
 	border: 1px solid #EBC7C7;
-	color: Black;
+	color: #000;
 }
 
 .soubor {
 	background-color: #D9E6F2;
 	border: 1px solid #BED3E4;
 	padding: 0 1px 0 1px;
-	color: Black;
+	color: #000;
 }
+
