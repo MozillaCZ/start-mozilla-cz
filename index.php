@@ -41,9 +41,6 @@ require 'inc/common.php';
 
             <div id="update" class="box dynamic">
                 <h2>Aktuální verze SeaMonkey</h2>
-                <div class="hide">
-                    <a href="#">Skrýt box</a>
-                </div>
                 <p>Máte aktuální verzi <strong>SeaMonkey <?php echo getLatestSeaMonkeyVersion(); ?></strong>? <a href="https://www.mozilla.cz/stahnout/seamonkey/">Stáhněte si ji z Mozilla.cz</a>.</p>
             </div>
 
@@ -58,7 +55,7 @@ require 'inc/common.php';
                 <div class="cb"></div>
             </div>
             
-            <div id="tips" class="box">
+            <div id="tips" class="box dynamic">
                 <h2>Tip k SeaMonkey</h2>
                 <?php
                 $tips = array(

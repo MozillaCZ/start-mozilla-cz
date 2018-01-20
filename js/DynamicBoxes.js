@@ -12,7 +12,12 @@ class DynamicBoxes {
             if (!this._isHiddenByCookie(box.id)) {
                 box.classList.add('visible');
             }
-            box.querySelector('.hide').addEventListener('click', (e) => {e.preventDefault(); this._hide(box)});
+            const hideLink = document.createElement('a');
+            hideLink.classList.add('hide');
+            hideLink.textContent = 'Skrýt box';
+            hideLink.href = '#';
+            hideLink.addEventListener('click', (e) => {e.preventDefault(); this._hide(box)});
+            box.insertBefore(hideLink, box.querySelector('h2').nextSibling);
         });
         this._showAllLink.addEventListener('click', (e) => {e.preventDefault(); this._showAll()});
         this._updateShowAllLink();
