@@ -59,6 +59,10 @@ require 'inc/common.php';
             </div>
         </div>
 
+        <div id="foot">
+            <a href="#" class="visible" id="show-all-boxes">Obnovit skryté</a>
+        </div>
+
         <script type="text/javascript" src="./js/DynamicBoxes.js"></script>
         <script type="text/javascript" src="./js/index.js"></script>
         <script type="text/javascript" src="./js/google-analytics.js"></script>

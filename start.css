@@ -106,8 +106,24 @@ a:active {
 	font-size: .85em;
 }
 
+#foot {
+	width: 550px;
+	margin: .2em auto;
+	font-size: .8em;
+}
+
+#foot a {
+	color: #888;
+}
+
+#foot a:hover {
+	text-decoration: none;
+	color: #666
+}
+
 #show-all-boxes {
 	display: none;
+	float: right;
 }
 
 #show-all-boxes.visible {
