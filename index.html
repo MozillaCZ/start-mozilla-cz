@@ -1,6 +1,6 @@
-<?php
-require 'inc/common.php';
-?>
+---
+---
+
 <!DOCTYPE html>
 <html xml:lang="cs" lang="cs">
     <head>
@@ -40,16 +40,16 @@ require 'inc/common.php';
 
             <div id="update" class="box dynamic">
                 <h2>Aktuální verze SeaMonkey</h2>
-                <p>Máte aktuální verzi <strong>SeaMonkey <?php echo getLatestSeaMonkeyVersion(); ?></strong>? <a href="https://www.mozilla.cz/stahnout/seamonkey/">Stáhněte si ji z Mozilla.cz</a>.</p>
+                <p>Máte aktuální verzi <strong>SeaMonkey {{site.data.versions['LATEST_SEAMONKEY_VERSION']}}</strong>? <a href="https://www.mozilla.cz/stahnout/seamonkey/">Stáhněte si ji z Mozilla.cz</a>.</p>
             </div>
 
             <div id="news" class="box">
                 <h2>Novinky</h2>
                 <div id="kratce">
-                    <?php echo getRSSHeaders('http://firefox-rss.ceskenoviny.cz/', 6); ?>
+                    {% include rss-headers.html rss=site.data.ceskenoviny limit=6 %}
                 </div>
                 <div id="mozilla">
-                    <?php echo getRSSHeaders('https://www.mozilla.cz/feed/', 7); ?>
+                    {% include rss-headers.html rss=site.data.mozillacz limit=7 %}
                 </div>
                 <div class="cb"></div>
             </div>
