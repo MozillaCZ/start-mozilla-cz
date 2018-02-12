@@ -13,6 +13,7 @@ get_remote_data:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - _cron
   - README.md
   - netlify.toml
 
