@@ -8,3 +8,15 @@
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = '''
+    </start.css>; rel=preload; as=style,
+    </favicon.ico>; rel=preload; as=image,
+    </img/logo.svg>; rel=preload; as=image,
+    </img/ddg_logo.svg>; rel=preload; as=image,
+    </js/DynamicBoxes.js>; rel=preload; as=script,
+    </js/index.js>; rel=preload; as=script,
+    </js/google-analytics.js>; rel=preload; as=script'''
+
