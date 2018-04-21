@@ -30,12 +30,14 @@ module Jekyll_Get_Remote_Data
     def json(site, d)
       open(d['url'], 'r') do |file|
         site.data[d['name']] = JSON.parse(file.read)
+        site.data[d['name']]['origin_url'] = d['url']
       end
     end
 
     def rss(site, d)
       open(d['url'], 'r') do |file|
         site.data[d['name']] = JSON.parse(FeedParser::Parser.parse(file.read).to_json)
+        site.data[d['name']]['origin_url'] = d['url']
       end
     end
 
