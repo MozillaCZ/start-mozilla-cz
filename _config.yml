@@ -15,5 +15,3 @@ exclude:
   - Gemfile.lock
   - _cron
   - README.md
-  - netlify.toml
-
