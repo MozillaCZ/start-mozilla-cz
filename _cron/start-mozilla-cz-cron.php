@@ -22,7 +22,10 @@ if ($is_day && ($is_full_hour || $is_half_hour)) {
 
 function trigger_travis_ci() {
     $url = 'https://api.travis-ci.org/repo/MozillaCZ%2Fstart-mozilla-cz/requests';
-    $body = '{ "request": { "branch":"master" } }';
+    $body = '{ "request": {
+        "branch": "master",
+        "message": "Cron: ' . date('Y-m-d H:i') . '"
+    } }';
     // $token = 'xxx';
     $opts = array(
         'http' => array(
