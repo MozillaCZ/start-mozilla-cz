@@ -1,7 +1,6 @@
 language: ruby
 
-install:
- - bundle install
+before_script:
  - gem install html-proofer -v '~> 3.8'
 
 script:
