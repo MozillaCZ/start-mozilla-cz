@@ -8,6 +8,9 @@ script:
  - bundle exec jekyll build
  - bundle exec htmlproofer ./_site --disable-external --allow-hash-href
 
+before_deploy
+ - touch ./_site/.nojekyll
+
 deploy:
 - provider: pages
   skip-cleanup: true
@@ -26,4 +29,3 @@ notifications:
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
