@@ -8,7 +8,7 @@ script:
  - bundle exec jekyll build
  - bundle exec htmlproofer ./_site --disable-external --allow-hash-href
 
-before_deploy
+before_deploy:
  - touch ./_site/.nojekyll
 
 deploy:
