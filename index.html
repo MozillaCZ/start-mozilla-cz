@@ -9,8 +9,12 @@
         <link rel="stylesheet" href="./start.css" type="text/css"/>
         <link rel="shortcut icon" href="./img/mozilla.svg" type="image/svg+xml">
         <link rel="shortcut icon" href="./favicon.ico"/>
-        <link rel="alternate" type="application/rss+xml" title="{{site.data.mozillacz.title}}" href="{{ site.data.mozillacz.origin_url }}"/>
-        <link rel="alternate" type="application/rss+xml" title="{{site.data.ceskenoviny.title}}" href="{{ site.data.ceskenoviny.origin_url }}"/>
+        {% for rss_feed in site.data.rss_feeds %}
+            {%- assign protocol = site.data[rss_feed].origin_url | split: ':' | first -%}
+            {% if protocol == "https" %}
+                <link rel="alternate" type="application/rss+xml" title="{{ site.data[rss_feed].title }}" href="{{ site.data[rss_feed].origin_url }}"/>
+            {% endif %}
+        {% endfor %}
     </head>
 
     <body>

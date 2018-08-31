@@ -15,6 +15,7 @@ module Jekyll_Get_Remote_Data
       if !config.kind_of?(Array)
         config = [config]
       end
+      site.data['rss_feeds'] = [];
       config.each do |d|
         case d['type'].downcase
           when 'json'
@@ -36,6 +37,7 @@ module Jekyll_Get_Remote_Data
 
     def rss(site, d)
       open(d['url'], 'r') do |file|
+        site.data['rss_feeds'].push(d['name'])
         site.data[d['name']] = JSON.parse(FeedParser::Parser.parse(file.read).to_json)
         site.data[d['name']]['origin_url'] = d['url']
       end
