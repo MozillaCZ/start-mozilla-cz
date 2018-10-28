@@ -13,5 +13,6 @@ get_remote_data:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - vendor
   - _cron
   - README.md
