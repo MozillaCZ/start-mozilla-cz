@@ -3,7 +3,7 @@ get_remote_data:
     url: 'https://www.seamonkey-project.org/seamonkey_versions.json'
     type: json
   - name: ceskenoviny
-    url: 'http://firefox-rss.ceskenoviny.cz/'
+    url: 'https://firefox-rss.ceskenoviny.cz/'
     type: rss
   - name: mozillacz
     url: 'https://www.mozilla.cz/feed/'
