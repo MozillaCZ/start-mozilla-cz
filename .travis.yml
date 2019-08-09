@@ -1,3 +1,4 @@
+dist: bionic
 language: ruby
 bundler_args: --path $HOME/.bundle --with test
 cache:
@@ -6,10 +7,10 @@ cache:
 
 script:
  - bundle exec jekyll build
- - bundle exec htmlproofer ./_site --disable-external --allow-hash-href
+ - bundle exec htmlproofer _site --disable-external --allow-hash-href
 
 before_deploy:
- - touch ./_site/.nojekyll
+ - touch _site/.nojekyll
 
 deploy:
 - provider: pages

@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-gem 'jekyll', '~> 3.8', '>= 3.8.4'
-gem 'json', '~> 2.1'
+gem 'jekyll', '~> 3.8', '>= 3.8.6'
+gem 'json', '~> 2.2'
 gem 'feedparser', '~> 2.1', '>= 2.1.1'
 
 group :test do
-  gem 'html-proofer', '~> 3.9', '>= 3.9.2'
+  gem 'html-proofer', '~> 3.11', '>= 3.11.1'
 end
