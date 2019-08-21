@@ -11,8 +11,6 @@ get_remote_data:
 
 # Build settings
 exclude:
-  - Gemfile
-  - Gemfile.lock
   - vendor
   - _cron
   - README.md
