@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'jekyll', '~> 4.0'
-gem 'json', '~> 2.2'
+gem 'json', '~> 2.3'
 gem 'feedparser', '~> 2.1', '>= 2.1.1'
 
 group :test do
