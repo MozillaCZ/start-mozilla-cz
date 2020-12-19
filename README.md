@@ -4,12 +4,17 @@
 
 Web [Start.mozilla.cz](https://start.mozilla.cz/) je úvodní stránkou v prohlížeči balíku SeaMonkey (dříve Mozilla Suite).
 
-### Náhled
-Před prvním zobrazením (nebo po změně souboru `Gemfile`) je potřeba stáhnout potřebné závislosti.
+## Úpravy obsahu
+
+### Příprava
+Abyste byli schopni spustit níže uvedené příkazy, je nutné mít nainstalované [Ruby 2.7](https://www.ruby-lang.org/en/documentation/installation/).
+
+Před prvním sestavením (nebo po změně souboru `Gemfile`) je potřeba stáhnout potřebné závislosti.
 ```
-$ bundle install --path vendor/bundle
+$ make prepare
 ```
 
+### Náhled
 Při úpravách vzhledu i obsahu je dobré rovnou se podívat na výsledek. Níže uvedený příkaz sestaví obsah repositáře a zpřístupní ho na lokální adrese http://localhost:4000/.
 ```
 $ bundle exec jekyll serve
@@ -19,6 +24,16 @@ Příkaz stačí spustit jednou v samostatném terminálu a nechat běžet. Poku
 ## Sestavení statické verze
 Pro sestavení webu slouží tento příkaz.
 ```
-$ bundle exec jekyll build
+$ make build
 ```
 Statická verze stránek je vygenerovaná do adresáře `_site`. Pro nasazení stačí jeho obsah nahrát na server třeba přes FTP.
+
+Pokud používáte Docker, pro sestavení můžete použít tento příkaz.
+```
+$ make build_in_podman
+```
+
+Na systémech, kde Docker nefunguje, nebo pokud upřednostňujete alternativní Podman, použijte tento příkaz.
+```
+$ make build_in_docker
+```
