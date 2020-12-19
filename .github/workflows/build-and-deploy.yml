@@ -43,6 +43,7 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     if: github.ref == 'refs/heads/master'
+    needs: build
     steps:
       - name: Download built site for deploy
         uses: actions/download-artifact@v2
