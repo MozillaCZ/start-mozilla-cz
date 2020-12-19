@@ -1,6 +1,6 @@
 # Start.mozilla.cz
 
-[![Build Status](https://api.travis-ci.com/MozillaCZ/start-mozilla-cz.svg?branch=master)](https://travis-ci.com/MozillaCZ/start-mozilla-cz)
+[![Build Status](https://github.com/MozillaCZ/start-mozilla-cz/workflows/.github/workflows/build-and-deploy.yml/badge.svg?branch=master)](https://github.com/MozillaCZ/start-mozilla-cz/actions)
 
 Web [Start.mozilla.cz](https://start.mozilla.cz/) je úvodní stránkou v prohlížeči balíku SeaMonkey (dříve Mozilla Suite).
 

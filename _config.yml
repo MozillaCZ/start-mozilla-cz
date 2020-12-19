@@ -12,5 +12,4 @@ get_remote_data:
 # Build settings
 exclude:
   - vendor
-  - _cron
   - README.md
