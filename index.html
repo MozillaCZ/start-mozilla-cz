@@ -1,80 +1,35 @@
----
----
-
 <!DOCTYPE html>
 <html xml:lang="cs" lang="cs">
     <head>
         <meta charset="UTF-8">
-        <title>Mozilla Start</title>
-        <link rel="stylesheet" href="./start.css" type="text/css"/>
-        <link rel="shortcut icon" href="./img/mozilla.svg" type="image/svg+xml">
-        <link rel="shortcut icon" href="./favicon.ico"/>
-        {% for rss_feed in site.data.rss_feeds %}
-            {%- assign protocol = site.data[rss_feed].origin_url | split: ':' | first -%}
-            {% if protocol == "https" %}
-                <link rel="alternate" type="application/rss+xml" title="{{ site.data[rss_feed].title }}" href="{{ site.data[rss_feed].origin_url }}"/>
-            {% endif %}
-        {% endfor %}
+        <title>Vítá vás SeaMonkey</title>
+        <link rel="stylesheet" href="./css/index.css" type="text/css"/>
+        <link rel="icon" href="./img/seamonkey16.png" type="image/png">
+        <link rel="canonical" href="https://www.seamonkey-project.org/start/index.cs.html" />
+        <meta http-equiv="refresh" content="0; url=https://www.seamonkey-project.org/start/?utm_medium=redirect&amp;utm_source=start.mozilla.cz">
+        <script>
+            window.location = "https://www.seamonkey-project.org/start/?utm_medium=redirect&utm_source=start.mozilla.cz"
+        </script>
     </head>
 
     <body>
         <div id="page">
-            <div id="head">
-                <h1><img src="./img/logo.svg" alt="Mozilla.cz"/></h1>
-                <ul>
-                    <li><a href="https://www.mozilla.cz/">Mozilla.cz</a></li>
-                    <li><a href="https://www.mozilla.cz/stahnout/">Stáhnout</a></li>
-                    <li><a href="https://www.mozilla.cz/produkty/firefox/">Firefox</a></li>
-                    <li><a href="https://www.mozilla.cz/produkty/thunderbird/">Thunderbird</a></li>
-                    <li><a href="https://www.mozilla.cz/produkty/seamonkey/">SeaMonkey</a></li>
-                </ul>
-            </div>
+            <header>
+                <h1>Vítá vás SeaMonkey</h1>
+            </header>
 
-            <div id="search" class="box">
-                <h2><a href="https://duckduckgo.com/">DuckDuckGo</a></h2>
-                <div id="links">
-                    <a href="https://duckduckgo.com/settings">Nastavení DuckDuckGo</a>
-                </div>
-                <form action="https://duckduckgo.com/" method="GET">
-                    <fieldset>
-                        <img src="./img/ddg_logo.svg" alt="DuckDuckGo logo"/>
-                        <input type="hidden" name="kl" value="cz-cs"/>
-                        <input type="text" name="q" size="31" id="q"/>
-                        <input type="submit" value="Hledat"/>
-                    </fieldset>
-                </form>
-            </div>
-
-            <div id="update" class="box dynamic">
-                <h2>Aktuální verze SeaMonkey</h2>
-                <p>Máte aktuální verzi <strong>SeaMonkey {{site.data.versions['LATEST_SEAMONKEY_VERSION']}}</strong>? <a href="https://www.mozilla.cz/stahnout/seamonkey/">Stáhněte si ji z Mozilla.cz</a>.</p>
-            </div>
-
-            <div id="news" class="box">
-                <h2>Novinky</h2>
-                <div id="kratce">
-                    {% include rss-headers.html rss=site.data.ceskenoviny limit=6 %}
-                </div>
-                <div id="mozilla">
-                    {% include rss-headers.html rss=site.data.mozillacz limit=7 %}
-                </div>
-                <div class="cb"></div>
-            </div>
-
-            <div id="tips" class="box dynamic">
-                <h2>Tip k SeaMonkey</h2>
-            </div>
+            <main>
+                <h2>Nová domovská stránka</h2>
+                <p>
+                    Česká verze SeaMonkey nyní používá oficiální domovskou stránku. Pokud nedojde k přesměrování, <a href="https://www.seamonkey-project.org/start/?utm_medium=referral&amp;utm_source=start.mozilla.cz">klepněte prosím zde</a>.
+                </p>
+            </main>
         </div>
 
-        <div id="foot">
-            <a href="#" class="visible" id="show-all-boxes">Obnovit skryté</a>
-        </div>
+        <footer>
+            <a href="https://www.mozilla.cz/">Mozilla.cz</a>
+        </footer>
 
-        <script type="text/javascript" src="./js/DynamicBoxes.js"></script>
-        <script type="text/javascript" src="./js/index.js"></script>
-        <script type="text/javascript" src="./js/google-analytics.js"></script>
-
-        <!-- Generated {{ site.time }} -->
-
+        <script src="./js/google-analytics.js"></script>
     </body>
 </html>
