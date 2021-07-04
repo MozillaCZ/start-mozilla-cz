@@ -1,0 +1,30 @@
+{
+  "name": "Mozilla Start",
+  "description": "Mozilla Start - Česká domovská stránka SeaMonkey",
+  "repository": {
+    "url": "https://github.com/MozillaCZ/start-mozilla-cz",
+    "license": ""
+  },
+  "participate": {
+    "docs": "https://github.com/MozillaCZ/start-mozilla-cz",
+    "irc": "irc://irc.mozilla.org/#l10n",
+    "irc-contacts": [
+      "MikkCZ"
+    ]
+  },
+  "bugs": {
+    "list": "https://github.com/MozillaCZ/start-mozilla-cz/issues",
+    "report": "https://github.com/MozillaCZ/start-mozilla-cz/issues/new"
+  },
+  "urls": {
+    "prod": "https://start.mozilla.cz/"
+  },
+  "keywords": [
+    "Mozilla",
+    "Jekyll",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ]
+}
+
